@@ -1,0 +1,44 @@
+:root {
+    --grønn: #606c38;
+    --mørkegrønn: #283618;
+    --krem: #fefae0;
+    --karamell: #dda15e;
+    --kobber: #bc6c25;
+
+    --tekst-stor: 1.125rem;
+    --tekst-normal: 1rem;
+    --tekst-liten: 0.875rem;
+
+    --font-overskrift: 'Playfair Display', serif;
+    --font-tekst: 'Lato', sans-serif;
+}
+
+/* CSS RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* CSS RESET */
+
+/* NAV */
+
+nav{
+    background-color: var(--mørkegrønn);
+}
+/* NAV */
