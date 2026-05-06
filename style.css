@@ -15,30 +15,213 @@
 
 /* CSS RESET */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img{
+img {
     max-width: 100%;
-
+    display: block;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-overskrift);
+    line-height: 1.2;
 }
 
 /* CSS RESET */
 
 /* NAV */
 
-nav{
+nav {
     background-color: var(--mørkegrønn);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
 }
+
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    max-width: 90%;
+}
+
+.logo {
+    color: var(--krem);
+    font-family: var(--font-overskrift);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--krem);
+    font-family: var(--font-tekst);
+    font-weight: 700;
+    font-size: var(--tekst-normal);
+}
+
+.nav-links a:hover {
+    color: var(--karamell);
+}
+
+.nav-links a.active {
+    color: var(--karamell);
+}
+
+.nav-burger{
+    display: none;
+}
+
 /* NAV */
+
+/* HEADER */
+
+header {
+    background-color: var(--grønn);
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-circle {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 40px solid rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+}
+
+.header-circle2 {
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.header-section {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--krem);
+    font-size: 0.75rem;
+    font-family: var(--font-tekst);
+    letter-spacing: 0.1em;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+}
+
+.header-section h1 {
+    font-size: 3rem;
+    color: var(--krem);
+    margin-bottom: 1rem;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    color: var(--krem);
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.header-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btn1, .btn2 {
+    color: var(--krem);
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-tekst);
+    font-weight: 700;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    display: inline-block;
+}
+
+.btn1:hover, .btn2:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/*  FOOTER  */
+footer {
+    background-color: var(--mørkegrønn);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: var(--krem);
+    font-size: var(--tekst-liten);
+    font-family: var(--font-tekst);
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+/* =========== BOKSIDE =========== */
+
+.bok-section1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
