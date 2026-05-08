@@ -1,9 +1,9 @@
 :root {
-    --grønn: #606c38;
-    --mørkegrønn: #283618;
-    --krem: #fefae0;
-    --karamell: #dda15e;
-    --kobber: #bc6c25;
+    --hsl-grønn: #606c38;
+    --hsl-mørkegrønn: #283618;
+    --hsl-krem: #fefae0;
+    --hsl-karamell: #dda15e;
+    --hsl-kobber: #bc6c25;
 
     --tekst-stor: 1.125rem;
     --tekst-normal: 1rem;
@@ -14,6 +14,10 @@
 }
 
 /* CSS RESET */
+html {
+    scroll-behavior: smooth;
+}
+
 
 * {
     margin: 0;
@@ -47,7 +51,7 @@ h4 {
 /* NAV */
 
 nav {
-    background-color: var(--mørkegrønn);
+    background-color: var(--hsl-mørkegrønn);
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
@@ -62,7 +66,7 @@ nav {
 }
 
 .logo {
-    color: var(--krem);
+    color: var(--hsl-krem);
     font-family: var(--font-overskrift);
     font-size: 1.25rem;
     font-weight: 700;
@@ -74,18 +78,18 @@ nav {
 }
 
 .nav-links a {
-    color: var(--krem);
+    color: var(--hsl-krem);
     font-family: var(--font-tekst);
     font-weight: 700;
     font-size: var(--tekst-normal);
 }
 
 .nav-links a:hover {
-    color: var(--karamell);
+    color: var(--hsl-karamell);
 }
 
 .nav-links a.active {
-    color: var(--karamell);
+    color: var(--hsl-karamell);
 }
 
 .nav-burger {
@@ -97,7 +101,7 @@ nav {
 /* HEADER */
 
 header {
-    background-color: var(--grønn);
+    background-color: var(--hsl-grønn);
     padding: 5rem 2rem;
     position: relative;
     overflow: hidden;
@@ -142,7 +146,7 @@ header {
 .header-tag {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
-    color: var(--krem);
+    color: var(--hsl-krem);
     font-size: 0.75rem;
     font-family: var(--font-tekst);
     letter-spacing: 0.1em;
@@ -153,13 +157,13 @@ header {
 
 .header-section h1 {
     font-size: 3rem;
-    color: var(--krem);
+    color: var(--hsl-krem);
     margin-bottom: 1rem;
 }
 
 .header-section p {
     font-size: 1.2rem;
-    color: var(--krem);
+    color: var(--hsl-krem);
     opacity: 0.85;
     margin-bottom: 2rem;
     max-width: 480px;
@@ -177,7 +181,7 @@ header {
 
 .btn1,
 .btn2 {
-    color: var(--krem);
+    color: var(--hsl-krem);
     padding: 0.75rem 1.75rem;
     border-radius: 8px;
     font-size: 1rem;
@@ -196,13 +200,13 @@ header {
 
 /*  FOOTER  */
 footer {
-    background-color: var(--mørkegrønn);
+    background-color: var(--hsl-mørkegrønn);
     padding: 1.5rem 2rem;
     text-align: center;
 }
 
 footer p {
-    color: var(--krem);
+    color: var(--hsl-krem);
     font-size: var(--tekst-liten);
     font-family: var(--font-tekst);
     opacity: 0.7;
@@ -212,20 +216,15 @@ footer p {
 
 
 
-
-
-
-
-
 /* =========== BOKSIDE =========== */
 
 .bok1 {
-    height: 40vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--krem);
-    border-bottom: var(--mørkegrønn) 3px dotted;
+    background-color: var(--hsl-krem);
+    border-bottom: var(--hsl-mørkegrønn) 3px dotted;
 }
 
 .bok-section1 {
@@ -236,9 +235,9 @@ footer p {
 }
 
 .sjangere-title {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: var(--mørkegrønn);
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: var(--hsl-mørkegrønn);
 }
 
 .sjangere {
@@ -249,13 +248,14 @@ footer p {
 
 .sjangere p {
     padding: 30px 60px;
-    border: 2px solid var(--grønn);
+    border: 2px solid var(--hsl-grønn);
     text-align: center;
     border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
     font-family: var(--font-tekst);
     font-weight: bold;
+    color: black;
 }
 
 .sjangere p:hover {
@@ -264,7 +264,7 @@ footer p {
 }
 
 .bok2 {
-    background-color: var(--grønn);
+    background-color: var(--hsl-grønn);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -310,9 +310,10 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--krem);
+    background-color: var(--hsl-krem);
     padding: 30px;
     width: 85%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .more-tekst {
@@ -345,28 +346,28 @@ footer p {
 }
 
 .fa-star.active {
-    color: var(--karamell);
+    color: var(--hsl-karamell);
 }
 
 .bok-title {
     font-size: 1.6rem;
     font-family: var(--font-overskrift);
-    color: var(--mørkegrønn);
+    color: var(--hsl-mørkegrønn);
 }
 
 .forfatter {
     font-style: italic;
     font-size: var(--tekst-liten);
-    color: var(--grønn);
+    color: var(--hsl-grønn);
 }
 
 .bokbtn {
     cursor: pointer;
-    background-color: var(--grønn);
-    border: 2px var(--mørkegrønn) solid;
+    background-color: var(--hsl-grønn);
+    border: 2px var(--hsl-mørkegrønn) solid;
     border-radius: 5px;
     padding: 5px 10px;
-    color: var(--krem);
+    color: var(--hsl-krem);
     text-transform: uppercase;
     letter-spacing: 1.8px;
     font-family: var(--font-tekst);
@@ -374,6 +375,148 @@ footer p {
 }
 
 .bokbtn:hover {
-    color: var(--mørkegrønn);
+    color: var(--hsl-mørkegrønn);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== REISEMÅL ============= */
+
+.reise-section1 {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--hsl-krem);
+}
+
+.section-asia {
+    width: 900px;
+    max-width: 90%;
+}
+
+.continent{
+    font-size: 28px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.continent-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 30px;
+    gap: 30px;
+    border-top: var(--hsl-karamell) solid 2px;
+}
+
+#japan-card {
+    grid-row: 1/-3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: var(--hsl-mørkegrønn);
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.land-navn {
+    color: var(--hsl-krem);
+    font-size: 28px;
+}
+
+.land-emoji {
+    font-size: 32px;
+}
+
+.continent-title {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--hsl-krem);
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.japan {
+    color: var(--hsl-grønn);
+    margin-bottom: 10px;
+}
+
+#japan-img{
+    display: none;
+}
+
+#japan-img.active{
+    display: block;
+    height: fit-content;
+}
+
+#japan-tekst.active{
+    display: none;
+}
+
+#japan-tekst{
+    display: block;
+}
+
+#japan-card.active{
+    padding: 0;
+    overflow: hidden;
+}
+
+.land-info {
+    color: var(--hsl-krem);
+    font-family: var(--font-tekst);
+    font-size: 12px;
+}
+
+.liten-land-info {
+    display: none;
+}
+
+#singapore-card {
+    padding: 30px;
+    background-color: var(--hsl-grønn);
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.singapore{
+    font-size: 24px;
+}
+
+#thailand-card {
+    padding: 30px;
+    background-color: var(--hsl-kobber);
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.thailand{
+    font-size: 24px;
+}
+

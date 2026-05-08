@@ -30,3 +30,16 @@ for (const starEl of starEls) {
     })
 }
 
+const japanEl = document.getElementById("japan-card")
+const japanImgEl = document.getElementById("japan-img")
+const japanTekstEl = document.getElementById("japan-tekst")
+
+japanEl.addEventListener("click", function () {
+    japanImgEl.classList.toggle("active")
+    japanTekstEl.classList.toggle("active")
+    japanEl.classList.toggle("active")
+})
+
+
+
+
