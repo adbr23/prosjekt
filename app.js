@@ -1,3 +1,31 @@
+/* ======= NAV ====== */
+
+const burgerEl = document.querySelector(".burger")
+const xEl = document.querySelector(".x")
+const navLinksEl = document.querySelector(".nav-links")
+
+burgerEl.addEventListener("click", function () {
+    xEl.classList.add("active")
+    burgerEl.classList.add("active")
+    navLinksEl.classList.add("active")
+})
+
+xEl.addEventListener("click", function () {
+    xEl.classList.remove("active")
+    burgerEl.classList.remove("active")
+    navLinksEl.classList.remove("active")
+})
+
+window.addEventListener("scroll", function () {
+    xEl.classList.remove("active")
+    burgerEl.classList.remove("active")
+    navLinksEl.classList.remove("active")
+})
+
+/* ====== NAV ======= */
+
+
+
 const moreEl = document.querySelector(".more-tekst")
 const aboutBtnEls = document.querySelectorAll(".bokbtn") /* finner alle knappene */
 
@@ -40,6 +68,21 @@ japanEl.addEventListener("click", function () {
     japanEl.classList.toggle("active")
 })
 
+
+const singaporeEl = document.getElementById("singapore-card")
+const singaporeTekstEl = document.querySelector(".hidden-tekst-singapore")
+
+singaporeEl.addEventListener("click", function () {
+    singaporeTekstEl.classList.toggle("active")
+})
+
+
+const thailandEl = document.getElementById("thailand-card")
+const thailandTekstEl = document.querySelector(".hidden-tekst-thailand")
+
+thailandEl.addEventListener("click", function () {
+    thailandTekstEl.classList.toggle("active")
+})
 
 
 

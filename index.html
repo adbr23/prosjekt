@@ -18,26 +18,27 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav>
         <section class="nav-section">
-            <a href="index.html" class="logo">🌿 ReiseGuiden</a>
-
-            <div class="nav-burger">
-                <i class="fa-solid fa-x"></i>
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i></a>
 
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Hjem</a></li>
+                <li><a href="index.html">Hjem</a></li>
                 <li><a href="reiseforslag.html">Reisemål</a></li>
-                <li><a href="bokside.html">Bøker</a></li>
+                <li><a href="bokside.html" class="active">Bøker</a></li>
                 <li><a href="#">Spill</a></li>
             </ul>
+
+            <div class="nav-burger">
+                <img src="./bilder/close-x.svg" alt="" class="x">
+                <img src="./bilder/burger-menu.svg" alt="" class="burger">
+            </div>
         </section>
     </nav>
+    <!-- NAV -->
 
-    <!-- HEADER -->
+
     <header>
         <div class="header-dots"></div>
         <div class="header-circle"></div>
@@ -63,6 +64,8 @@
         <p>© 2026 ReiseGuiden </p>
     </footer>
 
+    
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -18,13 +21,19 @@
     <!-- NAV -->
     <nav>
         <section class="nav-section">
-            <a href="index.html" class="logo">🌿 ReiseGuiden</a>
+            <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i></a>
+
             <ul class="nav-links">
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="reiseforslag.html" class="active">Reisemål</a></li>
-                <li><a href="bokside.html">Bøker</a></li>
+                <li><a href="reiseforslag.html">Reisemål</a></li>
+                <li><a href="bokside.html" class="active">Bøker</a></li>
                 <li><a href="#">Spill</a></li>
             </ul>
+
+            <div class="nav-burger">
+                <img src="./bilder/close-x.svg" alt="" class="x">
+                <img src="./bilder/burger-menu.svg" alt="" class="burger">
+            </div>
         </section>
     </nav>
     <!-- NAV -->
@@ -51,17 +60,19 @@
                 </div>
 
                 <div id="singapore-card">
-                    <p class="land-emoji">🇸🇬</p>
 
-                    <div class="region-info">
-                        <h4 class="continent-title">Asia</h4>
-                        <h3 class="land-navn singapore">Singapore</h3>
+
+                    <div id="show-tekst">
+                        <p class="land-emoji">🇸🇬</p>
+                        <div class="region-info">
+                            <h4 class="continent-title">Asia</h4>
+                            <h3 class="land-navn singapore">Singapore</h3>
+                        </div>
                     </div>
-
-                    <p class="liten-land-info">
-                        Fra ikoniske skyskrapere til fargerike gater, Singapore er Asias mest facinerende by.
-                    </p>
                 </div>
+                <p class="hidden-tekst-singapore">
+                    Fra ikoniske skyskrapere til fargerike gater er Singapore Asias mest facinerende by.
+                </p>
 
 
                 <div id="thailand-card">
@@ -71,11 +82,10 @@
                         <h4 class="continent-title">Asia</h4>
                         <h3 class="land-navn thailand">Thailand</h3>
                     </div>
-
-                    <p class="liten-land-info">
-                        Med ville jungler og avslappende strender er Thailand et av Asias mest elskede reisemål.
-                    </p>
                 </div>
+                <p class="hidden-tekst-thailand">
+                    Med ville jungler og avslappende strender er Thailand et av Asias mest elskede reisemål.
+                </p>
 
             </div>
 
@@ -84,8 +94,28 @@
 
 
         </div>
+
+        <div class="section-europa">
+            <h2 class="continent">Europa</h2>
+
+
+        </div>
+
+
+
+
+
+        </div>
     </section>
 
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ReiseGuiden </p>
+    </footer>
 
 
 

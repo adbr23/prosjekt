@@ -1,6 +1,8 @@
 :root {
     --hsl-grønn: #606c38;
+    --hsl-lys-grønn: #869456;
     --hsl-mørkegrønn: #283618;
+    --hsl-mer-mørkegrønn: #1a240e;
     --hsl-krem: #fefae0;
     --hsl-karamell: #dda15e;
     --hsl-kobber: #bc6c25;
@@ -55,6 +57,9 @@ nav {
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 .nav-section {
@@ -66,10 +71,19 @@ nav {
 }
 
 .logo {
-    color: var(--hsl-krem);
-    font-family: var(--font-overskrift);
     font-size: 1.25rem;
-    font-weight: 700;
+    background-color: var(--hsl-mer-mørkegrønn);
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-leaf {
+    color: var(--hsl-krem);
 }
 
 .nav-links {
@@ -403,8 +417,9 @@ footer p {
 .reise-section1 {
     display: flex;
     justify-content: center;
-    height: 100vh;
     background-color: var(--hsl-krem);
+    flex-direction: column;
+    align-items: center;
 }
 
 .section-asia {
@@ -412,7 +427,7 @@ footer p {
     max-width: 90%;
 }
 
-.continent{
+.continent {
     font-size: 28px;
     margin-top: 80px;
     margin-bottom: 10px;
@@ -420,7 +435,7 @@ footer p {
 
 .continent-card {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 30px;
     gap: 30px;
     border-top: var(--hsl-karamell) solid 2px;
@@ -428,10 +443,11 @@ footer p {
 
 #japan-card {
     grid-row: 1/-3;
+    grid-column: 1/-1;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 40px;
     background-color: var(--hsl-mørkegrønn);
     border-radius: 20px;
     cursor: pointer;
@@ -460,24 +476,24 @@ footer p {
     margin-bottom: 10px;
 }
 
-#japan-img{
+#japan-img {
     display: none;
 }
 
-#japan-img.active{
+#japan-img.active {
     display: block;
     height: fit-content;
 }
 
-#japan-tekst.active{
+#japan-tekst.active {
     display: none;
 }
 
-#japan-tekst{
+#japan-tekst {
     display: block;
 }
 
-#japan-card.active{
+#japan-card.active {
     padding: 0;
     overflow: hidden;
 }
@@ -488,35 +504,181 @@ footer p {
     font-size: 12px;
 }
 
-.liten-land-info {
-    display: none;
-}
-
 #singapore-card {
     padding: 30px;
     background-color: var(--hsl-grønn);
     border-radius: 20px;
-    display: flex;
     gap: 20px;
-    cursor: pointer;
+    display: flex;
     align-items: center;
+    cursor: pointer;
+    z-index: 2;
 }
 
-.singapore{
+#show-tekst {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hidden-tekst-singapore {
+    display: none;
+}
+
+.hidden-tekst-singapore.active {
+    display: block;
+    background-color: var(--hsl-lys-grønn);
+    border-radius: 0 0 20px 20px;
+    padding: 30px;
+    color: var(--hsl-krem);
+    font-family: var(--font-tekst);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    grid-column: -2/-1;
+    margin-top: -50px;
+    z-index: 1;
+
+}
+
+.singapore {
     font-size: 24px;
 }
+
 
 #thailand-card {
     padding: 30px;
     background-color: var(--hsl-kobber);
     border-radius: 20px;
-    display: flex;
     gap: 20px;
     cursor: pointer;
+    display: flex;
     align-items: center;
+    grid-row: 1/2;
+    z-index: 2;
+
 }
 
-.thailand{
+.thailand {
     font-size: 24px;
 }
 
+
+.hidden-tekst-thailand {
+    display: none;
+}
+
+.hidden-tekst-thailand.active {
+    display: block;
+    background-color: var(--hsl-karamell);
+    border-radius: 0 0 20px 20px;
+    padding: 30px;
+    color: var(--hsl-krem);
+    font-family: var(--font-tekst);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+
+
+
+
+@media (width < 750px) {
+    .sjangere {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bok-info {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .oddetall {
+        flex-direction: column-reverse;
+    }
+
+    .bok-tekst {
+        width: 100%;
+    }
+
+}
+
+@media (width < 550px) {
+    .bok-img {
+        display: none;
+    }
+
+    .stars {
+        display: none;
+    }
+
+    .bok-info {
+        margin-top: -30px;
+    }
+
+    .sjangere p {
+        padding: 20px 40px;
+    }
+
+    .nav-burger {
+        display: block;
+    }
+
+    .nav-links {
+        top: -200px;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .nav-links.active {
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        right: 0;
+        left: 0;
+        background-color: var(--hsl-mørkegrønn);
+        padding: 0 30px 30px 30px;
+        text-align: right;
+        transition: 0.5s;
+
+    }
+
+    .x {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        display: none;
+        cursor: pointer;
+    }
+
+    .x.active {
+        display: block;
+    }
+
+    .burger {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger.active {
+        display: none;
+    }
+
+}
