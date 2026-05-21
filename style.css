@@ -230,6 +230,19 @@ footer p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========== BOKSIDE =========== */
 
 .bok1 {
@@ -239,6 +252,8 @@ footer p {
     align-items: center;
     background-color: var(--hsl-krem);
     border-bottom: var(--hsl-mørkegrønn) 3px dotted;
+    position: relative;
+    z-index: 1;
 }
 
 .bok-section1 {
@@ -284,6 +299,8 @@ footer p {
     align-items: center;
     justify-content: center;
     height: fit-content;
+    position: relative;
+    z-index: 1;
 }
 
 .bok-section2 {
