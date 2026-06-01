@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Italiana&family=Yeseva+One&display=swap');
+
 :root {
-    --hsl-grønn: #606c38;
-    --hsl-lys-grønn: #869456;
-    --hsl-mørkegrønn: #283618;
-    --hsl-mer-mørkegrønn: #1a240e;
-    --hsl-krem: #fefae0;
-    --hsl-karamell: #dda15e;
-    --hsl-kobber: #bc6c25;
+    --hsl-cabernet: #3F1114;
+    --hsl-maroon: #681D24;
+    --hsl-blue: #206a75;
+    --hsl-beige: #b89d7f;
+    --hsl-krem: #fff9ec;
 
-    --tekst-stor: 1.125rem;
-    --tekst-normal: 1rem;
-    --tekst-liten: 0.875rem;
-
-    --font-overskrift: 'Playfair Display', serif;
-    --font-tekst: 'Lato', sans-serif;
+    --font-overskrift: "Yeseva One", serif;
+    ;
+    --font-underoverskrif: "Italiana", sans-serif;
+    --font-body: "Epunda Slab", serif;
 }
+
 
 /* CSS RESET */
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: var(--font-body);
+}
 
 * {
     margin: 0;
@@ -40,20 +42,49 @@ ul {
     list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1 {
     font-family: var(--font-overskrift);
     line-height: 1.2;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-underoverskrif);
 }
 
 /* CSS RESET */
 
 /* NAV */
 
+.opp {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 1.25rem;
+    background-color: var(--hsl-maroon);
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    border: 2px solid var(--hsl-cabernet);
+    z-index: 4;
+}
+
+.opp.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
 nav {
-    background-color: var(--hsl-mørkegrønn);
+    background-color: var(--hsl-cabernet);
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
@@ -72,7 +103,7 @@ nav {
 
 .logo {
     font-size: 1.25rem;
-    background-color: var(--hsl-mer-mørkegrønn);
+    background-color: var(--hsl-krem);
     border-radius: 50%;
     padding: 10px;
     width: 50px;
@@ -82,8 +113,8 @@ nav {
     align-items: center;
 }
 
-.fa-leaf {
-    color: var(--hsl-krem);
+.fa-book {
+    color: var(--hsl-cabernet);
 }
 
 .nav-links {
@@ -93,17 +124,17 @@ nav {
 
 .nav-links a {
     color: var(--hsl-krem);
-    font-family: var(--font-tekst);
+    font-family: var(--font-body);
     font-weight: 700;
-    font-size: var(--tekst-normal);
+    font-size: 18px;
 }
 
 .nav-links a:hover {
-    color: var(--hsl-karamell);
+    color: var(--hsl-beige);
 }
 
 .nav-links a.active {
-    color: var(--hsl-karamell);
+    color: var(--hsl-beige);
 }
 
 .nav-burger {
@@ -112,135 +143,190 @@ nav {
 
 /* NAV */
 
+
+
 /* HEADER */
 
+.index-body {
+    background-color: var(--hsl-krem);
+}
+
 header {
-    background-color: var(--hsl-grønn);
-    padding: 5rem 2rem;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    height: 60vh;
+    background-image: url(./bilder/bøker.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 90vh;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.header-circle {
-    position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    border: 40px solid rgba(255, 255, 255, 0.06);
-    pointer-events: none;
-}
-
-.header-circle2 {
-    position: absolute;
-    bottom: -80px;
-    left: -40px;
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    border: 30px solid rgba(255, 255, 255, 0.05);
-    pointer-events: none;
-}
-
 .header-section {
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.header-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--hsl-krem);
-    font-size: 0.75rem;
-    font-family: var(--font-tekst);
-    letter-spacing: 0.1em;
-    padding: 0.35rem 1rem;
-    border-radius: 20px;
-    margin-bottom: 1.2rem;
-}
-
-.header-section h1 {
-    font-size: 3rem;
-    color: var(--hsl-krem);
-    margin-bottom: 1rem;
-}
-
-.header-section p {
-    font-size: 1.2rem;
-    color: var(--hsl-krem);
-    opacity: 0.85;
-    margin-bottom: 2rem;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-}
-
-.header-btns {
-    display: flex;
-    gap: 1rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(104, 29, 36, 0.7);
+    padding: 60px 100px;
+    border-radius: 20px;
 }
 
-.btn1,
-.btn2 {
+.header-title {
+    color: var(--hsl-beige);
+    font-size: 102px;
+}
+
+.header-info {
+    color: var(--hsl-beige);
+    font-size: 22px;
+    font-style: italic;
+    margin-top: -40px;
+}
+
+.index-btn {
+    color: var(--hsl-maroon);
+    background-color: var(--hsl-beige);
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+
+/* HEADER */
+
+/* Index section 1 */
+
+.index-section1 {
+    display: flex;
+    justify-content: center;
+    /*    background-color: var(--hsl-krem); */
+}
+
+.ukens {
+    max-width: 800px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.ukens-title {
+    font-size: 48px;
+    color: var(--hsl-blue);
+}
+
+.ukens-tekst {
+    font-size: 18px;
+}
+
+.ukens-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.ukens-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ukens-info {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    margin-top: -10px;
+    width: 100%;
+    background-color: var(--hsl-maroon);
+    border-radius: 0 0 15px 15px;
+    z-index: -2;
+}
+
+.ukens-bok-tittel {
+    font-size: 22px;
     color: var(--hsl-krem);
-    padding: 0.75rem 1.75rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: var(--font-tekst);
-    font-weight: 700;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
-    background: transparent;
-    display: inline-block;
 }
 
-.btn1:hover,
-.btn2:hover {
-    background: rgba(255, 255, 255, 0.08);
+.ukens-card-item.active .ukens-info {
+    display: block;
+}
+
+.ukens-card img {
+    width: 200px;
+    border-radius: 14px;
 }
 
 
-/*  FOOTER  */
+/* Index section 1 */
+/* Index section 2 */
+
+.index-section2 {
+    background-color: #681D24;
+    border-radius: 10% 10% 0 0;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+.leseglede {
+    max-width: 800px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.leseglede-title {
+    margin-bottom: 100px;
+    font-size: 36px;
+}
+
+.leseglede-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.leseglede-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.leseglede-cards i {
+    font-size: 40px;
+}
+
+.leseglede-cards:hover {
+    color: var(--hsl-beige);
+    transition: 0.5s;
+}
+
+/* Index section 2 */
+
+/* Footer */
 footer {
-    background-color: var(--hsl-mørkegrønn);
+    background-color: var(--hsl-cabernet);
     padding: 1.5rem 2rem;
     text-align: center;
 }
 
 footer p {
-    color: var(--hsl-krem);
-    font-size: var(--tekst-liten);
-    font-family: var(--font-tekst);
-    opacity: 0.7;
+    color: var(--hsl-beige);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer */
 
 
 /* =========== BOKSIDE =========== */
@@ -265,8 +351,8 @@ footer p {
 
 .sjangere-title {
     margin-bottom: 50px;
-    font-size: 36px;
-    color: var(--hsl-mørkegrønn);
+    font-size: 48px;
+    color: var(--hsl-cabernet);
 }
 
 .sjangere {
@@ -277,23 +363,22 @@ footer p {
 
 .sjangere p {
     padding: 30px 60px;
-    border: 2px solid var(--hsl-grønn);
+    border: 2px solid var(--hsl-maroon);
     text-align: center;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    font-family: var(--font-tekst);
     font-weight: bold;
     color: black;
 }
 
 .sjangere p:hover {
-    background-color: rgba(96, 108, 56, 0.3);
+    background-color: rgba(63, 17, 20, 0.5);
 
 }
 
 .bok2 {
-    background-color: var(--hsl-grønn);
+    background-color: var(--hsl-maroon);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -332,8 +417,7 @@ footer p {
 .bok-tekst {
     width: 50%;
     line-height: 1.4;
-    font-family: var(--font-tekst);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .bok-card {
@@ -377,236 +461,257 @@ footer p {
 }
 
 .fa-star.active {
-    color: var(--hsl-karamell);
+    color: var(--hsl-beige);
 }
 
 .bok-title {
     font-size: 1.6rem;
     font-family: var(--font-overskrift);
-    color: var(--hsl-mørkegrønn);
+    color: var(--hsl-cabernet);
 }
 
 .forfatter {
     font-style: italic;
     font-size: var(--tekst-liten);
-    color: var(--hsl-grønn);
+    color: var(--hsl-blue);
 }
 
 .bokbtn {
     cursor: pointer;
-    background-color: var(--hsl-grønn);
-    border: 2px var(--hsl-mørkegrønn) solid;
+    background-color: var(--hsl-maroon);
+    border: 2px var(--hsl-cabernet) solid;
     border-radius: 5px;
     padding: 5px 10px;
     color: var(--hsl-krem);
     text-transform: uppercase;
     letter-spacing: 1.8px;
-    font-family: var(--font-tekst);
+    font-family: var(--font-body);
     margin-top: 30px;
 }
 
 .bokbtn:hover {
-    color: var(--hsl-mørkegrønn);
+    color: var(--hsl-cabernet);
 
 }
 
 
+/* BOKKLUBB */
 
 
+.hero-section {
+    height: 60vh;
+    background-color: var(--hsl-maroon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--hsl-krem);
+    gap: 20px;
+}
 
+.hero-title {
+    font-size: 56px;
+}
 
+.hero-circle {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 40px solid rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+}
 
+.hero-circle2 {
+    position: absolute;
+    top: 400px;
+    left: -40px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
 
+/* SECTION 1 */
 
-
-
-
-
-
-
-
-
-
-
-/* ========== REISEMÅL ============= */
-
-.reise-section1 {
+.bokklubb-section1 {
     display: flex;
     justify-content: center;
     background-color: var(--hsl-krem);
-    flex-direction: column;
-    align-items: center;
+    height: 80vh;
 }
 
-.section-asia {
-    width: 900px;
-    max-width: 90%;
+.blimed {
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    margin-top: 40px;
 }
 
-.continent {
-    font-size: 28px;
-    margin-top: 80px;
-    margin-bottom: 10px;
-}
-
-.continent-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 30px;
-    gap: 30px;
-    border-top: var(--hsl-karamell) solid 2px;
-}
-
-#japan-card {
-    grid-row: 1/-3;
-    grid-column: 1/-1;
+.blimed-tekst {
+    padding: 60px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    padding: 40px;
-    background-color: var(--hsl-mørkegrønn);
-    border-radius: 20px;
-    cursor: pointer;
-    overflow: hidden;
+    gap: 15px;
+    background-color: var(--hsl-maroon);
+    position: absolute;
+    left: 40%;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 20%;
 }
 
-.land-navn {
-    color: var(--hsl-krem);
-    font-size: 28px;
-}
-
-.land-emoji {
+.blimed-title {
     font-size: 32px;
 }
 
-.continent-title {
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--hsl-krem);
-    font-size: 12px;
-    font-weight: 100;
-}
-
-.japan {
-    color: var(--hsl-grønn);
-    margin-bottom: 10px;
-}
-
-#japan-img {
-    display: none;
-}
-
-#japan-img.active {
-    display: block;
-    height: fit-content;
-}
-
-#japan-tekst.active {
-    display: none;
-}
-
-#japan-tekst {
-    display: block;
-}
-
-#japan-card.active {
-    padding: 0;
-    overflow: hidden;
-}
-
-.land-info {
-    color: var(--hsl-krem);
-    font-family: var(--font-tekst);
-    font-size: 12px;
-}
-
-#singapore-card {
-    padding: 30px;
-    background-color: var(--hsl-grønn);
-    border-radius: 20px;
-    gap: 20px;
-    display: flex;
-    align-items: center;
+.blimedimgs {
+    width: 50%;
+    position: relative;
     cursor: pointer;
-    z-index: 2;
+    aspect-ratio: 3 / 4;
+
 }
 
-#show-tekst {
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.hidden-tekst-singapore {
-    display: none;
-}
-
-.hidden-tekst-singapore.active {
+.blimedimgs img {
+    width: 100%;
+    border-radius: 15px;
     display: block;
-    background-color: var(--hsl-lys-grønn);
-    border-radius: 0 0 20px 20px;
-    padding: 30px;
-    color: var(--hsl-krem);
-    font-family: var(--font-tekst);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+
+.blimedimg1 {
+    opacity: 1;
+}
+
+.blimedimg1.active {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blimedimg2 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blimedimg2.active {
+    opacity: 1;
+}
+
+
+
+
+.bokklubb-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hsl-beige);
+}
+
+.bokklubb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+}
+
+.karusell-title {
+    font-size: 26px;
+    color: var(--hsl-cabernet);
+}
+
+.bokkarusell-container {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    grid-column: -2/-1;
-    margin-top: -50px;
-    z-index: 1;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
-}
-
-.singapore {
-    font-size: 24px;
+    gap: 40px;
+    padding: 40px;
 }
 
 
-#thailand-card {
-    padding: 30px;
-    background-color: var(--hsl-kobber);
-    border-radius: 20px;
-    gap: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    grid-row: 1/2;
-    z-index: 2;
-
-}
-
-.thailand {
-    font-size: 24px;
+.bokkarusell-container img {
+    width: 200px;
+    border-radius: 8px;
+    flex-shrink: 0;
 }
 
 
-.hidden-tekst-thailand {
-    display: none;
-}
 
-.hidden-tekst-thailand.active {
-    display: block;
-    background-color: var(--hsl-karamell);
-    border-radius: 0 0 20px 20px;
-    padding: 30px;
-    color: var(--hsl-krem);
-    font-family: var(--font-tekst);
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    z-index: 1;
-    margin-top: -50px;
-}
+
+
+
+
+
+
+
+/* BOKKLUBB */
+
+
+
+
+
+
+
 
 
 
 
 
 @media (width < 750px) {
+
+    /* INDEX */
+
+    .header-title {
+        font-size: 52px;
+        text-align: center;
+    }
+
+    .header-info {
+        font-size: 18px;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .header-section {
+        padding: 30px 40px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .ukens-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .leseglede-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* INDEX */
+
+
+
+
+
+
     .sjangere {
         grid-template-columns: 1fr 1fr;
     }
@@ -626,9 +731,106 @@ footer p {
         width: 100%;
     }
 
+
+    /* BOKKLUBB */
+
+    .hero-title {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .velkomst {
+        text-align: center;
+    }
+
+    .hero-circle,
+    .hero-circle2 {
+        display: none;
+    }
+
+    .bokklubb-section1 {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .blimed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .blimedimgs {
+        width: 70%;
+    }
+
+    .blimed-tekst {
+        position: relative;
+        left: auto;
+        top: auto;
+        right: auto;
+
+        width: 90%;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    .bokkarusell-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .bokkarusell-container img {
+        scroll-snap-align: start;
+    }
+
 }
 
 @media (width < 550px) {
+
+    .index-section2 {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .header-title {
+        font-size: 40px;
+    }
+
+    .header-section {
+        padding: 25px 20px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .index-btn {
+        font-size: 14px;
+    }
+
+    .ukens-title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .ukens-card {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .leseglede-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .leseglede-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+
+
+
     .bok-img {
         display: none;
     }
@@ -663,7 +865,7 @@ footer p {
         top: 80px;
         right: 0;
         left: 0;
-        background-color: var(--hsl-mørkegrønn);
+        background-color: var(--hsl-cabernet);
         padding: 0 30px 30px 30px;
         text-align: right;
         transition: 0.5s;
@@ -696,6 +898,43 @@ footer p {
 
     .burger.active {
         display: none;
+    }
+
+
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-section {
+        height: 40vh;
+    }
+
+    .blimedimgs {
+        width: 90%;
+    }
+
+    .blimed-title {
+        font-size: 24px;
+    }
+
+    .blimed-tekst {
+        padding: 25px;
+        font-size: 14px;
+    }
+
+    .karusell-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bokkarusell-container {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .bokkarusell-container img {
+        width: 140px;
     }
 
 }

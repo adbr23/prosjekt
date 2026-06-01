@@ -5,67 +5,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
-        rel="stylesheet">
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
-<body>
-    <!-- NAV -->
+<body class="index-body">
+    <button class="opp"><i class="fa-solid fa-arrow-up"></i></button>
+
     <nav>
-        <section class="nav-section">
-            <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i></a>
+        <div class="nav-section">
+            <a href="index2.html" class="logo"><i class="fa-solid fa-book"></i></a>
 
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Hjem</a></li>
-                <li><a href="reiseforslag.html">Reisemål</a></li>
+                <li><a href="index2.html" class="active">Hjem</a></li>
                 <li><a href="bokside.html">Bøker</a></li>
-                <li><a href="#">Spill</a></li>
+                <li><a href="bokklubb.html">Bokklubben</a></li>
             </ul>
 
             <div class="nav-burger">
                 <img src="./bilder/close-x.svg" alt="" class="x">
                 <img src="./bilder/burger-menu.svg" alt="" class="burger">
             </div>
-        </section>
+        </div>
     </nav>
-    <!-- NAV -->
-
 
     <header>
-        <div class="header-dots"></div>
-        <div class="header-circle"></div>
-        <div class="header-circle2"></div>
-        <section class="header-section">
-            <h1>Verden venter på deg</h1>
-            <p>Oppdag de stedene som passer for deg og bøkene <br>
-                som tar deg dit</p>
-            <div class="header-btns">
-                <a href="reiseforslag.html" class="btn1">Se reisemål</a>
-                <a href="bokside.html" class="btn2">Utforsk bøker</a>
-            </div>
+        <div class="header-section">
+            <h1 class="header-title">Reisen</h1>
+            <p class="header-info">Utforsk verden gjennom bøker</p>
 
-        </section>
+            <a href="bokside.html" class="index-btn">Utforsk flere bøker!</a>
+        </div>
     </header>
 
+    <section class="index-section1">
+        <div class="ukens">
+            <h3 class="ukens-title">Ukens anbefalte</h3>
+            <p class="ukens-tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad et architecto laboriosam
+                fugit illu</p>
 
 
+            <div class="ukens-card">
+                <div class="ukens-card-item">
+                    <img src="./bilder/dystopianbok.jpg" alt="krim">
+                    <div class="ukens-info">
+                        <h4 class="ukens-bok-tittel">Shatter Me</h4>
+                        <p class="ukens-forfatter">Tahereh Mafi</p>
+                    </div>
+                </div>
+
+                <div class="ukens-card-item">
+                    <img src="./bilder/faktabok.webp" alt="krim">
+                    <div class="ukens-info">
+                        <h4 class="ukens-bok-tittel">Grensen</h4>
+                        <p class="ukens-forfatter">Erika Fatland</p>
+                    </div>
+                </div>
+                
+                <div class="ukens-card-item">
+                    <img src="./bilder/fantasybok.jpg" alt="krim">
+                    <div class="ukens-info">
+                        <h4 class="ukens-bok-tittel">Throne of Glass</h4>
+                        <p class="ukens-forfatter">Sarah J. Maas</p>
+                    </div>
+                </div>
 
 
-    <!-- FOOTER -->
+            </div>
+        </div>
+
+    </section>
+
+    <section class="index-section2">
+        <div class="leseglede">
+            <h2 class="leseglede-title">Hvorfor er det bra å lese?</h2>
+            <div class="leseglede-grid">
+
+                <div class="leseglede-cards">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <p>Gir kunnskap</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <p>Utvikler fantasi og kreativitet</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-solid fa-arrow-down-a-z"></i>
+                    <p>Øker ordforrådet</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Forbedrer konsentrasjonsevnen</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-solid fa-brain"></i>
+                    <p>Styrker hukommelsen</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-solid fa-pencil"></i>
+                    <p>Forbedrer rettskriving</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-regular fa-face-smile-beam"></i>
+                    <p>Gir underholdning</p>
+                </div>
+
+                <div class="leseglede-cards">
+                    <i class="fa-solid fa-seedling"></i>
+                    <p>Bidrar til inspirasjon</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
     <footer>
-        <p>© 2026 ReiseGuiden </p>
+        <p>© 2026 Bøker </p>
     </footer>
 
-
     <script src="app.js"></script>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
