@@ -1,17 +1,17 @@
-const aboutBtnEls = document.querySelectorAll(".bokbtn");
+const aboutBtnEls = document.querySelectorAll(".bokbtn")
 
 for (const aboutBtnEl of aboutBtnEls) {
     aboutBtnEl.addEventListener("click", function () {
 
-        const bokCard = aboutBtnEl.closest(".bok-card");
-        const moreEl = bokCard.querySelector(".more-tekst");
+        const bokCard = aboutBtnEl.closest(".bok-card")
+        const moreEl = bokCard.querySelector(".more-tekst")
 
-        moreEl.classList.toggle("active");
+        moreEl.classList.toggle("active")
 
         if (moreEl.classList.contains("active")) {
-            aboutBtnEl.textContent = "Se mindre";
+            aboutBtnEl.textContent = "Se mindre"
         } else {
-            aboutBtnEl.textContent = "Se mer";
+            aboutBtnEl.textContent = "Se mer"
         }
     });
 }

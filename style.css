@@ -191,7 +191,6 @@ header {
     background-color: var(--hsl-beige);
     padding: 10px 20px;
     border-radius: 20px;
-
 }
 
 /* HEADER */
@@ -374,7 +373,6 @@ footer p {
 
 .sjangere p:hover {
     background-color: rgba(63, 17, 20, 0.5);
-
 }
 
 .bok2 {
@@ -491,12 +489,9 @@ footer p {
 
 .bokbtn:hover {
     color: var(--hsl-cabernet);
-
 }
 
-
 /* BOKKLUBB */
-
 
 .hero-section {
     height: 60vh;
@@ -579,7 +574,6 @@ footer p {
     position: relative;
     cursor: pointer;
     aspect-ratio: 3 / 4;
-
 }
 
 .blimedimgs img {
@@ -591,7 +585,6 @@ footer p {
     left: 0;
     transition: 0.5s;
 }
-
 
 .blimedimg1 {
     opacity: 1;
@@ -610,9 +603,6 @@ footer p {
 .blimedimg2.active {
     opacity: 1;
 }
-
-
-
 
 .bokklubb-section2 {
     display: flex;
@@ -646,33 +636,11 @@ footer p {
     padding: 40px;
 }
 
-
 .bokkarusell-container img {
     width: 200px;
     border-radius: 8px;
     flex-shrink: 0;
 }
-
-
-
-
-
-
-
-
-
-
-/* BOKKLUBB */
-
-
-
-
-
-
-
-
-
-
 
 
 @media (width < 750px) {
@@ -707,11 +675,6 @@ footer p {
 
     /* INDEX */
 
-
-
-
-
-
     .sjangere {
         grid-template-columns: 1fr 1fr;
     }
@@ -730,7 +693,6 @@ footer p {
     .bok-tekst {
         width: 100%;
     }
-
 
     /* BOKKLUBB */
 
@@ -778,14 +740,11 @@ footer p {
     .bokkarusell-container {
         justify-content: flex-start;
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
-    }
-
-    .bokkarusell-container img {
-        scroll-snap-align: start;
     }
 
 }
+
+
 
 @media (width < 550px) {
 
@@ -828,9 +787,6 @@ footer p {
         text-align: center;
     }
 
-
-
-
     .bok-img {
         display: none;
     }
@@ -869,7 +825,6 @@ footer p {
         padding: 0 30px 30px 30px;
         text-align: right;
         transition: 0.5s;
-
     }
 
     .x {
@@ -899,8 +854,6 @@ footer p {
     .burger.active {
         display: none;
     }
-
-
 
     .hero-title {
         font-size: 30px;
